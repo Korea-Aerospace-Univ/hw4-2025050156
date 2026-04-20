@@ -11,7 +11,7 @@ int main(void) {
 
 	scanf("%d", &length);
 	getchar();  /* 기존 강의자료대로. */
-	for(i=0; i<length; i++) {
+	for(i=0; i<=length; i++) {  /* 마지막에 개행을 받기 위해 한 문자 더 받음. */
 		scanf("%c", &c);  /* getchar를 안 다뤘으므로... */
 		if(c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') {
 			ecnt++;
@@ -25,6 +25,9 @@ int main(void) {
 				if(maxe < ecnt) maxe = ecnt;
 				ecnt = 0;
 			}
+		} else {
+			if(maxn < ncnt) maxn = ncnt;
+			if(maxe < ecnt) maxe = ecnt;
 		}
 	}
 
