@@ -16,9 +16,10 @@ int main(void)
 		else if(input > answer)
 			/* disp = '>'; */
 			printf("%d>?\n", input);
+		else
+			printf("%d==?\n", input);
 		cnt++;
 	} while(input != answer);
-	printf("%d==?\n", input);
 	printf("%d", cnt);  /* 또는 한 번에 */
 
 	return 0;
